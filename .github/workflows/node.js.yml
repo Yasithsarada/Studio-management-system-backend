@@ -36,4 +36,5 @@ jobs:
            echo AZURE_SQL_PASSWORD=${{ secrets.AZURE_SQL_PASSWORD }} >> .env
            echo AZURE_SQL_DATABASE=${{ secrets.AZURE_SQL_DATABASE }} >> .env
            echo AZURE_SQL_AUTHENTICATIONTYPE=${{ secrets.AZURE_SQL_AUTHENTICATIONTYPE }} >> .env
+    - run: pm2 restart BackendAPI
 
