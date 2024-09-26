@@ -25,12 +25,12 @@ const userRouter = require('./router/userRouter.js');
 
 const { notFound, errorHandler } = require('./middleware/errorHandler.js');
 
-app.use("/customerManager",customerManagerRouter)
-app.use("/eventManager", eventMangerRouter)
-app.use("/employeeManager", employeeManagerRouter)
-app.use('/superAdmin', superAdminRouter);
-app.use('/customer',customerRouter );
-app.use('/', userRouter);
+app.use("/api/customerManager",customerManagerRouter)
+app.use("/api/eventManager", eventMangerRouter)
+app.use("/api/employeeManager", employeeManagerRouter)
+app.use('/api/superAdmin', superAdminRouter);
+app.use('/api/customer',customerRouter );
+app.use('/api/', userRouter);
 
 
 // const { notFound, errorHandler } = require('./middleware/errorHandler.js');
