@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(bodyParser.json());
+const PORT=5000
 
 const db = require('./config/db.config.js');
 db.sequelize.sync();
@@ -38,7 +39,7 @@ app.use('/', userRouter);
 
 
 
-const server = app.listen(process.env.PORT, () => console.log(`App started on port: ${process.env.PORT}`));
+const server = app.listen(PORT, () => console.log(`App started on port: ${PORT}`));
 
 // Set up Socket.IO
 const io = socketIo(server,{
