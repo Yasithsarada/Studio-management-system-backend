@@ -7,7 +7,7 @@ const socketIo = require('socket.io');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors()); 
 app.use(bodyParser.json());
 
 const db = require('./config/db.config.js');
