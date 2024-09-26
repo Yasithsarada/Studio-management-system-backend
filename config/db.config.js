@@ -2,10 +2,8 @@ const Sequelize = require('sequelize');
 // const { DataTypes } = require(Sequelize);
 require('dotenv').config();
 
-// const server = process.env.AZURE_SQL_SERVER;
-const server = "studio-server1.database.windows.net";
-// const database = process.env.AZURE_SQL_DATABASE;
-const database = "smsDB";
+const server = process.env.AZURE_SQL_SERVER;
+const database = process.env.AZURE_SQL_DATABASE;
 const port = 1433;
 const type = process.env.AZURE_SQL_AUTHENTICATIONTYPE;
 const user = process.env.AZURE_SQL_USERNAME;
