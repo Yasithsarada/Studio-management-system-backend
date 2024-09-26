@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); 
 require('dotenv').config();
 const socketIo = require('socket.io');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors()); 
 app.use(bodyParser.json());
 const PORT=5000
 
