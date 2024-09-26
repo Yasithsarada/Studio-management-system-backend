@@ -30,9 +30,10 @@ jobs:
     - run: npm run build --if-present
     - run: 
            touch .env
-           echo "${{ secrets.AZURE_SQL_USERNAME }}" > .env
-           echo "${{ secrets.AZURE_SQL_SERVER }}" > .env
-           echo "${{ secrets.AZURE_SQL_PORT }}" > .env
-           echo "${{ secrets.AZURE_SQL_PASSWORD }}" > .env
-           echo "${{ secrets.AZURE_SQL_DATABASE }}" > .env
-           echo "${{ secrets.AZURE_SQL_AUTHENTICATIONTYPE }}" > .env
+           echo AZURE_SQL_USERNAME=${{ secrets.AZURE_SQL_USERNAME }} >> .env
+           echo AZURE_SQL_SERVER=${{ secrets.AZURE_SQL_SERVER }} >> .env
+           echo AZURE_SQL_PORT=${{ secrets.AZURE_SQL_PORT }} >> .env
+           echo AZURE_SQL_PASSWORD=${{ secrets.AZURE_SQL_PASSWORD }} >> .env
+           echo AZURE_SQL_DATABASE=${{ secrets.AZURE_SQL_DATABASE }} >> .env
+           echo AZURE_SQL_AUTHENTICATIONTYPE=${{ secrets.AZURE_SQL_AUTHENTICATIONTYPE }} >> .env
+
